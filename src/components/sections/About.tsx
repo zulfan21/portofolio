@@ -66,7 +66,7 @@ export function About() {
               {/* Image Container */}
               <div className="relative bg-slate-100 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://drive.google.com/file/d/1UQgRPcQTozUp97z2Hj81DAaJxL2W3XFY/view?usp=sharing"
+                  src="https://drive.google.com/uc?export=view&id=1UQgRPcQTozUp97z2Hj81DAaJxL2W3XFY"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
