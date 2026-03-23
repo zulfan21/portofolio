@@ -1,49 +1,60 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, Phone, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Send,
+  Mail,
+  MapPin,
+  Phone,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 const contactInfo = [
   {
     icon: Mail,
-    label: 'Email',
-    value: 'john.doe@example.com',
-    href: 'mailto:john.doe@example.com',
+    label: "Email",
+    value: "john.doe@example.com",
+    href: "mailto:john.doe@example.com",
   },
   {
     icon: Phone,
-    label: 'Phone',
-    value: '+62 812 3456 7890',
-    href: 'tel:+6281234567890',
+    label: "Phone",
+    value: "+62 812 3456 7890",
+    href: "tel:+6281234567890",
   },
   {
     icon: MapPin,
-    label: 'Location',
-    value: 'Jakarta, Indonesia',
-    href: '#',
+    label: "Location",
+    value: "Jakarta, Indonesia",
+    href: "#",
   },
 ];
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
 ];
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -53,23 +64,47 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+
+      try {
+        const res = await fetch("https://formspree.io/f/xkoqlkdp", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            subject: "Pesan dari Portfolio Website",
+          }),
+        });
+
+        if (res.ok) {
+          setIsSubmitted(true);
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          alert("Gagal mengirim pesan ❌");
+        }
+      } catch (error) {
+        alert("Terjadi error ❌");
+      }
+
+      setIsSubmitting(false);
+    };
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
+    setFormData({ name: "", email: "", message: "" });
+
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 md:py-32 bg-white dark:bg-slate-900"
-    >
+    <section id="contact" className="py-20 md:py-32 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -86,8 +121,9 @@ export function Contact() {
             Mari Bekerja Sama
           </h2>
           <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
-            Punya ide project menarik atau ingin berkolaborasi? Jangan ragu untuk
-            menghubungi saya. Saya selalu terbuka untuk diskusi dan peluang baru.
+            Punya ide project menarik atau ingin berkolaborasi? Jangan ragu
+            untuk menghubungi saya. Saya selalu terbuka untuk diskusi dan
+            peluang baru.
           </p>
         </motion.div>
 
@@ -103,8 +139,8 @@ export function Contact() {
               Informasi Kontak
             </h3>
             <p className="text-slate-600 dark:text-slate-400 mb-8">
-              Anda dapat menghubungi saya melalui berbagai channel berikut. Saya akan
-              berusaha merespons secepat mungkin.
+              Anda dapat menghubungi saya melalui berbagai channel berikut. Saya
+              akan berusaha merespons secepat mungkin.
             </p>
 
             {/* Contact Details */}
@@ -120,8 +156,12 @@ export function Contact() {
                     <item.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">{item.label}</p>
-                    <p className="font-medium text-slate-900 dark:text-white">{item.value}</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">
+                      {item.label}
+                    </p>
+                    <p className="font-medium text-slate-900 dark:text-white">
+                      {item.value}
+                    </p>
                   </div>
                 </motion.a>
               ))}
@@ -176,13 +216,17 @@ export function Contact() {
                     Pesan Terkirim!
                   </h4>
                   <p className="text-green-700 dark:text-green-500">
-                    Terima kasih telah menghubungi saya. Saya akan merespons secepat mungkin.
+                    Terima kasih telah menghubungi saya. Saya akan merespons
+                    secepat mungkin.
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name" className="text-slate-700 dark:text-slate-300">
+                    <Label
+                      htmlFor="name"
+                      className="text-slate-700 dark:text-slate-300"
+                    >
                       Nama Lengkap
                     </Label>
                     <Input
@@ -198,7 +242,10 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-slate-700 dark:text-slate-300">
+                    <Label
+                      htmlFor="email"
+                      className="text-slate-700 dark:text-slate-300"
+                    >
                       Email
                     </Label>
                     <Input
@@ -214,7 +261,10 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-slate-700 dark:text-slate-300">
+                    <Label
+                      htmlFor="message"
+                      className="text-slate-700 dark:text-slate-300"
+                    >
                       Pesan
                     </Label>
                     <Textarea
@@ -237,7 +287,11 @@ export function Contact() {
                     {isSubmitting ? (
                       <motion.div
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                        transition={{
+                          duration: 1,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
                         className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                       />
                     ) : (
