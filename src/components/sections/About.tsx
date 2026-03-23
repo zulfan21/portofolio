@@ -58,8 +58,9 @@ export function About() {
             Mari Berkenalan
           </h2>
           <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
-            Saya adalah seorang developer yang selalu haus akan pengetahuan baru
-            dan passionate dalam menciptakan solusi digital yang inovatif.
+            Saya adalah mahasiswa Teknologi Rekayasa Perangkat Lunak yang aktif
+            mengembangkan kemampuan di bidang web development melalui berbagai
+            proyek untuk menciptakan aplikasi yang modern dan inovatif.
           </p>
         </motion.div>
 
