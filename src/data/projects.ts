@@ -18,4 +18,13 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/zulfan21/nihonggoquiz',
     liveUrl: 'https://nihongoquizu.vercel.app/',
   },
+  {
+    id: 2,
+    title: 'POS System Kasir',
+    description: 'Aplikasi web untuk sistem kasir menggunakan local storage untuk menyimpan data transaksi',
+    image: '/POS.png',
+    technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/zulfan21/kasir',
+    liveUrl: 'https://kasirproject16.vercel.app/',
+  },
 ];
