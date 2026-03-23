@@ -7,7 +7,6 @@ import {
   Phone,
   Github,
   Linkedin,
-  Twitter,
   Instagram,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,28 +18,27 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "john.doe@example.com",
-    href: "mailto:john.doe@example.com",
+    value: "maulanazulfan1604@gmail.com",
+    href: "mailto:maulanazulfan1604@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+62 812 3456 7890",
-    href: "tel:+6281234567890",
+    value: "+6285710571023",
+    href: "tel:+62857105711023",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Jakarta, Indonesia",
+    value: "Bogor, Indonesia",
     href: "#",
   },
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: Github, href: "https://github.com/zulfan21", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/maulana-zulfan", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/zulfanzka", label: "Instagram" },
 ];
 
 export function Contact() {

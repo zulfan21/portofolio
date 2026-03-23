@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
-import { Heart, Github, Linkedin, Twitter, Instagram, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Instagram, ArrowUp } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+  { icon: Github, href: 'https://github.com/zulfan21', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/maulana-zulfan', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://instagram.com/zulfanzka', label: 'Instagram' },
 ];
 
 const navLinks = [
@@ -96,21 +95,21 @@ export function Footer() {
             <ul className="space-y-3 text-slate-400">
               <li>
                 <a
-                  href="mailto:john.doe@example.com"
+                  href="mailto:maulanazulfan1604@gmail.com"
                   className="hover:text-blue-400 transition-colors"
                 >
-                  john.doe@example.com
+                  maulanazulfan1604@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+6281234567890"
+                  href="tel:+6285710571023"
                   className="hover:text-blue-400 transition-colors"
                 >
-                  +62 812 3456 7890
+                  +62 857 1057 1023
                 </a>
               </li>
-              <li>Jakarta, Indonesia</li>
+              <li>Bogor, Indonesia</li>
             </ul>
           </motion.div>
         </div>
@@ -124,9 +123,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="text-slate-400 text-sm flex items-center gap-1"
             >
-              © {new Date().getFullYear()} John Doe. Made with{' '}
-              <Heart className="w-4 h-4 text-red-500 fill-red-500" /> using React &
-              Tailwind CSS
+              © {new Date().getFullYear()} Maulana Zulfan Azka.
             </motion.p>
 
             {/* Back to Top */}
