@@ -1,33 +1,47 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Code2, Palette, Globe, Database, Layout, Smartphone } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+  Code2,
+  Palette,
+  Globe,
+  Database,
+  Layout,
+  Smartphone,
+} from "lucide-react";
 
 const skills = [
-  { name: 'HTML/CSS', level: 95, icon: Layout },
-  { name: 'JavaScript', level: 90, icon: Code2 },
-  { name: 'React', level: 88, icon: Code2 },
-  { name: 'TypeScript', level: 85, icon: Code2 },
-  { name: 'Node.js', level: 80, icon: Database },
-  { name: 'UI/UX Design', level: 75, icon: Palette },
-  { name: 'Mobile Dev', level: 70, icon: Smartphone },
-  { name: 'DevOps', level: 65, icon: Globe },
+  { name: "HTML/CSS", level: 95, icon: Layout },
+  { name: "JavaScript", level: 90, icon: Code2 },
+  { name: "React", level: 88, icon: Code2 },
+  { name: "TypeScript", level: 85, icon: Code2 },
+  { name: "Node.js", level: 80, icon: Database },
+  { name: "UI/UX Design", level: 75, icon: Palette },
+  { name: "Mobile Dev", level: 70, icon: Smartphone },
+  { name: "DevOps", level: 65, icon: Globe },
 ];
 
 const technologies = [
-  'React', 'Next.js', 'TypeScript', 'Node.js', 'Express', 'MongoDB',
-  'PostgreSQL', 'Tailwind CSS', 'Git', 'Docker', 'AWS', 'Figma'
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "PostgreSQL",
+  "Tailwind CSS",
+  "Git",
+  "Docker",
+  "AWS",
+  "Figma",
 ];
 
 export function About() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section
-      id="about"
-      className="py-20 md:py-32 bg-white dark:bg-slate-900"
-    >
+    <section id="about" className="py-20 md:py-32 bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -62,7 +76,7 @@ export function About() {
               {/* Background Decoration */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl rotate-6 opacity-20" />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl -rotate-3 opacity-10" />
-              
+
               {/* Image Container */}
               <div className="relative bg-slate-100 dark:bg-slate-800 rounded-3xl overflow-hidden shadow-2xl">
                 <img
@@ -70,18 +84,24 @@ export function About() {
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
-                
+
                 {/* Experience Badge */}
                 <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.5, type: 'spring' }}
+                  transition={{ delay: 0.5, type: "spring" }}
                   className="absolute bottom-6 right-6 bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-xl"
                 >
                   <div className="text-center">
-                    <span className="block text-3xl font-bold text-blue-600">5+</span>
-                    <span className="text-sm text-slate-600 dark:text-slate-400">Tahun<br/>Pengalaman</span>
+                    <span className="block text-3xl font-bold text-blue-600">
+                      5+
+                    </span>
+                    <span className="text-sm text-slate-600 dark:text-slate-400">
+                      Tahun
+                      <br />
+                      Pengalaman
+                    </span>
                   </div>
                 </motion.div>
               </div>
@@ -99,22 +119,23 @@ export function About() {
             <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
               Saya adalah Web Developer yang Fokus pada Kualitas
             </h3>
-            
+
             <div className="space-y-4 text-slate-600 dark:text-slate-400 mb-8">
               <p>
-                Dengan pengalaman lebih dari 5 tahun di dunia pengembangan web, saya telah
-                membantu berbagai klien dan perusahaan untuk membangun aplikasi web yang
-                modern, scalable, dan user-friendly.
+                Dengan pengalaman lebih dari 5 tahun di dunia pengembangan web,
+                saya telah membantu berbagai klien dan perusahaan untuk
+                membangun aplikasi web yang modern, scalable, dan user-friendly.
               </p>
               <p>
-                Saya percaya bahwa kode yang baik bukan hanya tentang fungsionalitas,
-                tetapi juga tentang kebersihan, maintainability, dan performa. Setiap
-                proyek yang saya kerjakan selalu saya approach dengan mindset tersebut.
+                Saya percaya bahwa kode yang baik bukan hanya tentang
+                fungsionalitas, tetapi juga tentang kebersihan, maintainability,
+                dan performa. Setiap proyek yang saya kerjakan selalu saya
+                approach dengan mindset tersebut.
               </p>
               <p>
-                Selain coding, saya juga senang berbagi pengetahuan melalui blog dan
-                komunitas developer. Saya percaya bahwa berbagi adalah cara terbaik
-                untuk belajar dan berkembang bersama.
+                Selain coding, saya juga senang berbagi pengetahuan melalui blog
+                dan komunitas developer. Saya percaya bahwa berbagi adalah cara
+                terbaik untuk belajar dan berkembang bersama.
               </p>
             </div>
 
@@ -149,7 +170,7 @@ export function About() {
           <h3 className="text-2xl font-bold text-slate-900 dark:text-white text-center mb-12">
             Skills & Expertise
           </h3>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skill, index) => (
               <motion.div
@@ -160,7 +181,7 @@ export function About() {
                 whileHover={{ y: -5 }}
                 className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3">
                   <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
                     <skill.icon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
