@@ -168,17 +168,6 @@ export function About() {
                     {skill.name}
                   </span>
                 </div>
-                
-                <div className="relative">
-                  <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : {}}
-                      transition={{ duration: 1, delay: 0.3 + index * 0.1 }}
-                      className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
-                    />
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
