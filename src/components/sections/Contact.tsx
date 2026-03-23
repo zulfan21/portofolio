@@ -65,42 +65,29 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      setIsSubmitting(true);
+    try {
+      const res = await fetch("https://formspree.io/f/xkoqlkdp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          subject: "Pesan dari Portfolio Website",
+        }),
+      });
 
-      try {
-        const res = await fetch("https://formspree.io/f/xkoqlkdp", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...formData,
-            subject: "Pesan dari Portfolio Website",
-          }),
-        });
-
-        if (res.ok) {
-          setIsSubmitted(true);
-          setFormData({ name: "", email: "", message: "" });
-        } else {
-          alert("Gagal mengirim pesan ❌");
-        }
-      } catch (error) {
-        alert("Terjadi error ❌");
+      if (res.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Gagal mengirim pesan ❌");
       }
-
-      setIsSubmitting(false);
-    };
+    } catch (error) {
+      alert("Terjadi error ❌");
+    }
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   return (
