@@ -95,12 +95,10 @@ export function About() {
                 >
                   <div className="text-center">
                     <span className="block text-3xl font-bold text-blue-600">
-                      5+
+                      10+
                     </span>
                     <span className="text-sm text-slate-600 dark:text-slate-400">
-                      Tahun
-                      <br />
-                      Pengalaman
+                      Projek
                     </span>
                   </div>
                 </motion.div>
@@ -122,20 +120,21 @@ export function About() {
 
             <div className="space-y-4 text-slate-600 dark:text-slate-400 mb-8">
               <p>
-                Dengan pengalaman lebih dari 5 tahun di dunia pengembangan web,
-                saya telah membantu berbagai klien dan perusahaan untuk
-                membangun aplikasi web yang modern, scalable, dan user-friendly.
+                Saya adalah mahasiswa Teknologi Rekayasa Perangkat Lunak yang
+                memiliki minat besar dalam pengembangan web. Saya aktif
+                mempelajari dan mengembangkan aplikasi web yang modern,
+                responsif, dan user-friendly melalui berbagai proyek yang saya
+                kerjakan.
               </p>
               <p>
                 Saya percaya bahwa kode yang baik bukan hanya tentang
                 fungsionalitas, tetapi juga tentang kebersihan, maintainability,
-                dan performa. Setiap proyek yang saya kerjakan selalu saya
-                approach dengan mindset tersebut.
+                dan performa. Setiap proyek yang saya kerjakan menjadi sarana
+                untuk terus belajar dan meningkatkan kemampuan.
               </p>
               <p>
-                Selain coding, saya juga senang berbagi pengetahuan melalui blog
-                dan komunitas developer. Saya percaya bahwa berbagi adalah cara
-                terbaik untuk belajar dan berkembang bersama.
+                Selain coding, saya juga senang mengeksplorasi teknologi baru
+                dan mengembangkan skill melalui berbagai proyek yang saya buat.
               </p>
             </div>
 

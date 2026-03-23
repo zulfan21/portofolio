@@ -67,7 +67,7 @@ export function Hero() {
           >
             Halo, Saya{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              John Doe
+              Zulfan
             </span>
           </motion.h1>
 
@@ -90,9 +90,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed"
           >
-            Saya adalah seorang developer yang passionate dalam membangun aplikasi web
-            modern, responsif, dan user-friendly. Fokus saya adalah menciptakan
-            pengalaman digital yang berkesan dan berdampak.
+            Saya adalah mahasiswa Teknologi Rekayasa Perangkat Lunak yang memiliki minat besar dalam pengembangan web. 
+            Saya aktif mempelajari dan mengembangkan aplikasi web yang modern, responsif, 
+            dan user-friendly melalui berbagai proyek yang saya kerjakan.
           </motion.p>
 
           {/* CTA Buttons */}
