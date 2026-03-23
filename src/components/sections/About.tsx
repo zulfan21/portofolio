@@ -54,14 +54,6 @@ export function About() {
           <span className="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium mb-4">
             Tentang Saya
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-            Mari Berkenalan
-          </h2>
-          <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
-            Saya adalah mahasiswa Teknologi Rekayasa Perangkat Lunak yang aktif
-            mengembangkan kemampuan di bidang web development melalui berbagai
-            proyek untuk menciptakan aplikasi yang modern dan inovatif.
-          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
