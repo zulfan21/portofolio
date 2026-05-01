@@ -15,7 +15,6 @@ function App() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -30,14 +29,18 @@ function App() {
       </AnimatePresence>
 
       {!isLoading && (
-        <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300 overflow-x-hidden">
+          {/* 🔥 FIX GLOBAL OVERFLOW */}
+          
           <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-          <main>
+
+          <main className="overflow-x-hidden">
             <Hero />
             <About />
             <Projects />
             <Contact />
           </main>
+
           <Footer />
         </div>
       )}
