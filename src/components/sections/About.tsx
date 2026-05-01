@@ -4,7 +4,6 @@ import { useRef } from "react";
 import {
   Code2,
   Palette,
-  Globe,
   Database,
   Layout,
   Smartphone,
@@ -14,25 +13,23 @@ const skills = [
   { name: "HTML/CSS", level: 95, icon: Layout },
   { name: "JavaScript", level: 90, icon: Code2 },
   { name: "React", level: 88, icon: Code2 },
-  { name: "TypeScript", level: 85, icon: Code2 },
-  { name: "Node.js", level: 80, icon: Database },
+  { name: "Laravel", level: 85, icon: Code2 },
+  { name: "PHP", level: 85, icon: Code2 },
+  { name: "MySQL", level: 80, icon: Database },
   { name: "UI/UX Design", level: 75, icon: Palette },
   { name: "Mobile Dev", level: 70, icon: Smartphone },
-  { name: "DevOps", level: 65, icon: Globe },
 ];
 
 const technologies = [
   "React",
-  "Next.js",
-  "TypeScript",
+  "HTML",
+  "JavaScript",
+  "PHP",
+  "Laravel",
   "Node.js",
-  "Express",
-  "MongoDB",
-  "PostgreSQL",
+  "MySQL",
   "Tailwind CSS",
   "Git",
-  "Docker",
-  "AWS",
   "Figma",
 ];
 

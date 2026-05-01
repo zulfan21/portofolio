@@ -11,8 +11,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Japanese Learning Web',
-    description: 'Aplikasi web untuk belajar bahasa Jepang dengan fitur pembelajaran interaktif dan kuis',
+    title: 'Nihongo Quizu',
+    description: 'Web untuk berlatih bahasa Jepang dasar dengan fitur pembelajaran interaktif dan kuis',
     image: '/Nihongo.png',
     technologies: ['React', 'JavaScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/zulfan21/nihonggoquiz',
@@ -20,11 +20,20 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'POS System Kasir',
+    title: 'Sistem Kasir Sederhana',
     description: 'Aplikasi web untuk sistem kasir menggunakan local storage untuk menyimpan data transaksi',
     image: '/POS.png',
     technologies: ['React', 'JavaScript', 'Tailwind CSS'],
     githubUrl: 'https://github.com/zulfan21/kasir',
     liveUrl: 'https://kasirproject16.vercel.app/',
+  },
+    {
+    id: 3,
+    title: 'Amelia Hantaran',
+    description: 'Website untuk bisnis hantaran pernikahan dengan fitur katalog produk dan pengelolaan pesanan',
+    image: '/Hantaran.png',
+    technologies: ['PHP', 'Laravel', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/zulfan21/ameliahantaran',
+    liveUrl: 'https://github.com/zulfan21/ameliahantaran',
   },
 ];

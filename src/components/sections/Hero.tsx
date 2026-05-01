@@ -54,7 +54,7 @@ export function Hero() {
             className="mb-4"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium">
-              👋 Selamat Datang di Portfolio Saya
+              👋 Selamat Datang di Portofolio Saya
             </span>
           </motion.div>
 
