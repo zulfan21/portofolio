@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import { projects } from '@/data/projects';
+import { projects, type Project } from '@/data/projects';
 import { Button } from '@/components/ui/button';
 
 export function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  // ✅ FIX TYPE
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <section
@@ -14,7 +15,7 @@ export function Projects() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* HEADER (TIDAK DIUBAH) */}
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +36,7 @@ export function Projects() {
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project: Project, index: number) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -59,7 +60,7 @@ export function Projects() {
                     transition={{ duration: 0.5 }}
                   />
 
-                  {/* OVERLAY (TETAP ADA) */}
+                  {/* OVERLAY */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
@@ -71,7 +72,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()} // 🔥 penting
+                      onClick={(e) => e.stopPropagation()}
                       className="p-3 bg-white rounded-full text-slate-900 hover:bg-blue-500 hover:text-white transition-colors"
                     >
                       <Github className="w-6 h-6" />
@@ -83,7 +84,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={(e) => e.stopPropagation()} // 🔥 penting
+                      onClick={(e) => e.stopPropagation()}
                       className="p-3 bg-white rounded-full text-slate-900 hover:bg-blue-500 hover:text-white transition-colors"
                     >
                       <ExternalLink className="w-6 h-6" />
@@ -91,7 +92,7 @@ export function Projects() {
                   </motion.div>
                 </div>
 
-                {/* CONTENT (TIDAK DIUBAH) */}
+                {/* CONTENT */}
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
@@ -103,7 +104,7 @@ export function Projects() {
 
                   {/* TECH */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
+                    {project.technologies.map((tech: string) => (
                       <span
                         key={tech}
                         className="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-md text-xs font-medium"
@@ -145,7 +146,7 @@ export function Projects() {
           ))}
         </div>
 
-        {/* ================= MODAL ================= */}
+        {/* MODAL */}
         <AnimatePresence>
           {selectedProject && (
             <motion.div
@@ -181,7 +182,7 @@ export function Projects() {
           )}
         </AnimatePresence>
 
-        {/* FOOTER BUTTON (TIDAK DIUBAH) */}
+        {/* FOOTER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
