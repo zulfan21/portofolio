@@ -36,4 +36,13 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/zulfan21/ameliahantaran',
     liveUrl: 'https://github.com/zulfan21/ameliahantaran',
   },
+      {
+    id: 4,
+    title: 'Dapur Nusantara',
+    description: 'Website untuk bisnis katering',
+    image: '/dapur.png',
+    technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/zulfan21/dapurnusantara',
+    liveUrl: 'https://dapurnusantara21.vercel.app/',
+  },
 ];
